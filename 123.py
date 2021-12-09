@@ -2,13 +2,9 @@ import streamlit as st
 import pandas as pd
 
 # 設定網頁標題
-st.title('My App')
+st.title('我的第一個程式')
 
 # 加入網頁文字內容
-st.write("My first app")
+st.write("我的第一個程式")
 
-# 加入 pandas 資料表格
-st.write(pd.DataFrame({
-    'first column': [1, 2, 3, 4],
-    'second column': [10, 20, 30, 40]
-}))
+st.write("嘗試創建**表格**")
