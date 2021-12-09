@@ -1,7 +1,7 @@
 import streamlit as st
 
-w = st.numberinput('請輸入體重(KG)？'))
-h = st.numberinput('請輸入身高(M)？'))
+w = st.number input('請輸入體重(KG)？'))
+h = st.number input('請輸入身高(M)？'))
 bmi =w/h*h
 st.write('BMI為', bmi)
 if (bmi < 18):
