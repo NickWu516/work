@@ -8,7 +8,7 @@ option = st.selectbox(
   '轉換幣值',
   ['美金','英鎊','歐元'])
 
-if option=='美金':
+if option=='美金',o=英鎊:
   us=t/27.81
   st.write(us,'美元')
 elif option=='英鎊':
