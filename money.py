@@ -8,3 +8,9 @@ option = st.selectbox(
 if option=='美金':
   us=t/27.81
   st.write(us,'美元')
+elif option=='英鎊':
+  uk=t/37.17
+  st.write(uk,'英鎊')
+elif option=='歐元':
+  eu=t/31.54
+  st.write(eu,'歐元')
