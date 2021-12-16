@@ -6,5 +6,5 @@ option = st.selectbox(
   ['美金','英鎊','歐元'])
 confirm_input=st.button('確認')
 if option=='美金':
-  us=t/30
+  us=t/27.81
   st.write(us,'美元')
