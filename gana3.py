@@ -1,5 +1,6 @@
 import sys, time
 import random
+import streamlit as st
 
 import pygame
 from pygame.locals import Color, QUIT, MOUSEBUTTONDOWN, USEREVENT, USEREVENT
