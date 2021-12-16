@@ -1,11 +1,11 @@
 import streamlit as st
 st.title('幣值轉換')
 o=st.selectbox(
-  '選擇幣值',
+  '原本幣值',
   ['美金','英鎊','歐元'])
 t=st.number_input('金額')
 option = st.selectbox(
-  '選擇幣值',
+  '轉換幣值',
   ['美金','英鎊','歐元'])
 
 if option=='美金':
