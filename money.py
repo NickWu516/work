@@ -5,3 +5,6 @@ option = st.selectbox(
   '選擇幣值',
   ['美金','英鎊','歐元'])
 confirm_input=st.button('確認')
+if option=='美金':
+  us=t/30
+  st.write(us,'美元')
