@@ -4,7 +4,7 @@ o=st.selectbox(
   '選擇幣值',
   ['美金','英鎊','歐元'])
 d=st.number_input('金額')
-o2=st.selectbox(
+op=st.selectbox(
   '選擇幣值',
   ['美金','英鎊','歐元'])
   
