@@ -1,19 +1,22 @@
 import streamlit as st
-st.title('幣值轉換')
+import requests
+from bs4 import BeautifulSoup
+from datetime import datetime
+import pandas as pd
+import matplotlib.pyplot as plt
+url = "https://rate.bot.com.tw/xrt?Lang=zh-TW"
+resp = requests.get(url)
+resp.encoding = 'utf-8'
+html_soup = BeautifulSoup(resp.text, "lxml")
+rate_table = html_soup.find('table', attrs={'title':'牌告匯率'}).find('tbody').find_all('tr')
+st.title('匯率')
 o=st.selectbox(
-  '原本幣值',
-  ['美金','英鎊','歐元'])
-t=st.number_input('金額')
-option = st.selectbox(
-  '轉換幣值',
+  '選擇幣值',
   ['美金','英鎊','歐元'])
 
-if option=='美金',o=英鎊:
-  us=t/27.81
-  st.write(us,'美元')
-elif option=='英鎊':
-  uk=t/37.17
-  st.write(uk,'英鎊')
-elif option=='歐元':
-  eu=t/31.54
-  st.write(eu,'歐元')
+if o=='美金':
+  currency = rate_table[0].find('div', attrs={'class':'visible-phone print_hide'})
+st.write(currency.text.replace(" ", ""))  # 去掉所有的空白
+buyin_rate = rate_table[0].find('td', attrs={'data-table':'本行現金買入'})
+sellout_rate = rate_table[0].find('td', attrs={'data-table':'本行現金賣出'})
+st.write("即時現金買入: {}, 即時現金賣出: {}".format(buyin_rate.get_text(), sellout_rate.get_text()))
